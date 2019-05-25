@@ -1,0 +1,62 @@
+td{
+  font-size:18px;
+}
+textarea{
+  border-radius:3px;
+  width:500px;
+  height:125px;
+  overflow: hidden;
+}
+.repost{
+  border-radius:3px;
+  width:364px;
+  height: auto;  
+  overflow: hidden;
+}
+.postagem{
+  margin:20px;
+  width:500px;
+  background-color: rgb(240, 240, 240);
+  border-radius:3px;
+  .foto{
+    width: 80px;
+  }
+}
+
+.comentarios {
+ 
+  display: block;
+  padding: 10px;
+  
+   
+  li {
+    list-style: none;
+    
+    .foto {
+      width: 15%;
+      display: inline-block;
+    }
+    .comentario {
+      width:70%;
+      padding: 10px;
+      margin: 5px;
+      background-color: lightblue;
+      display: inline-block;
+
+      .foto {
+        width: 100%;
+      }
+    }
+  }
+  
+  div {
+    margin: 10px auto;
+    padding: 4px;
+    background-color: lightgrey;
+
+  input,button {
+    padding: 4px;
+    font-size: .9em;
+  }
+ }
+}

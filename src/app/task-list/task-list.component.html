@@ -1,0 +1,36 @@
+<div class="postagem">
+
+  <h1>Postagens</h1>
+  <input [(ngModel)]="postagem.id" [hidden]=true>
+  <textarea [(ngModel)]="postagem.texto"></textarea>
+  <hr>
+  <button (click)="postar(postagem)">Postar</button>
+</div>
+
+
+<div class="comentarios">
+
+  <div *ngFor="let postagem of postagens">
+
+    <div class="foto">
+      <img src="../../assets/perfil.png" class="foto" alt="foto de quem postou">
+    </div>
+    <div class="comentario">
+      <h2>{{postagem.id}} - {{postagem.texto}}</h2>
+    </div>
+    <ul>
+
+      <li *ngFor="let comentario of postagem.comentarios">
+        <div class="foto">
+          <img src="../../assets/perfil2.png" width="100%" alt="foto de quem comentou">
+        </div>
+        <div class="comentario" *ngIf="postagem.comentarios">
+          {{comentario}}
+        </div>
+      </li>
+    </ul>
+    <div>
+      <input [(ngModel)]="postagem.comentario"><button (click)="comentar(postagem)">Comentar</button>
+    </div>
+  </div>
+</div>
